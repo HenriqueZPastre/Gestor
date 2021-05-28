@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Expenses</title>
+
+    <script>
+
+        var categoria;
+        var descricao;
+        var valor;
+        var data;
+
+        var betas = [
+            {
+                "Descrição": "Salario",
+                "Valor": "108555555555555",
+                "Data": "21-05-25",
+                "Categoria": "Receita",
+            },
+            {
+                "Descrição": "Luz",
+                "Valor": "15",
+                "Data": "21-05-25",
+                "Categoria": "Despesa",
+            },
+            {
+                "Descrição": "Comisão",
+                "Valor": "30.10",
+                "Data": "21-05-25",
+                "Categoria": "Receita",
+            },
+            {
+                "Descrição": "Gole",
+                "Valor": "35.32",
+                "Data": "21-05-25",
+                "Categoria": "Metas",
+            },
+            {
+                "Descrição": "Agua",
+                "Valor": "40.50",
+                "Data": "21-05-25",
+                "Categoria": "Despesa",
+            },
+        ]
+
+        let beta = betas.find(beta => beta.valor === "30");
+
+        let as = {
+            "serial": "5",
+            "valor": "20",
+        }
+
+        function push() {
+
+            data = document.getElementById("date_input").value;
+            valor = document.getElementById("valor_input").value;
+            descricao = document.getElementById("descricao_input").value;
+
+            if (document.getElementById("receita_radio").checked) {
+                categoria = document.getElementById("receita_radio").value;
+
+
+            } else if (document.getElementById("despesa_radio").checked) {
+                categoria = document.getElementById("despesa_radio").value;
+
+
+            } else if (document.getElementById("meta_radio").checked) {
+                categoria = document.getElementById("meta_radio").value;
+
+            }
+            let add_new_line = {
+                "Descrição": descricao,
+                "Valor": valor,
+                "Data": data,
+                "Categoria": categoria,
+            }
+
+            betas.push(add_new_line);
+            
+            return viwer_list();
+
+        };
+        var bilqs=""
+        function viwer_list() {
+            for (a=0;a<1;a++){
+                bilqs =""
+            for (i = 0; i < betas.length; i++) {
+                var bt_delet = `<button class="delete-btn" id=${i} onClick="remove_line(this.id)">Delete</button>`;
+                bilqs = bilqs +betas[i].Descrição +" = " +"R$ " +betas[i].Valor +" Data : "+betas[i].Data +" Categoria : " +betas[i].Categoria +"  "+bt_delet +"<br>";
+                document.getElementById("takes").innerHTML = bilqs;  
+            }
+        }
+        }
+
+        function remove_line(id){
+            betas.splice(id,1);
+            return viwer_list();
+            console.log(betas);
+        }
+
+        var t=0;
+
+        function calc(){
+            for (a=0;a<1;a++){
+                t=0;
+            for (i=0;i<betas.length;i++){
+                var alte = parseFloat(betas[i].Valor);
+                t += alte;
+                document.getElementById("ast").innerHTML=t.toFixed(2);
+            }
+        }
+        }
+
+
+    </script>
+
+    <style>
+
+        #takes{
+            text-align: center;
+        }
+
+        hr {
+            opacity: 0;
+        }
+
+        #form_one {
+            margin-left: 40%;
+            margin-right: 40%;
+            text-align: left;
+        }
+
+        #alt {
+            text-align: center;
+            margin-left: 46%;
+            margin-right: 46%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="liquido"></div>
+        <div id="receitas"></div>
+        <div id="despesas"></div>
+        <div id="metas"></div>
+        <div id="add_things">
+
+            <form id="form_one">
+
+                <label> Descrição:</label>
+                <input type="text" id="descricao_input">
+                <hr>
+                <label> Valor:</label>
+                <input type="number" id="valor_input">
+                <hr>
+                <label>Data:</label>
+                <input type="date" id="date_input">
+                <hr>
+                <label> Categoria : </label>
+                <hr>
+                <input type="radio" id="receita_radio" name="type" value="Receita">
+                <label for="Receita">Receita</label>
+                <hr>
+                <input type="radio" id="despesa_radio" name="type" value="Despesa">
+                <label for="Despesa">Despesa</label>
+                <hr>
+                <input type="radio" id="meta_radio" name="type" value="Metas">
+                <label for="Metas">Metas</label>
+                <hr>
+            </form>
+            <button onclick="push()" id="alt">Enviar</button>
+            <button onclick="viwer_list()">Take</button>
+            <button onclick="calc()">calc</button>
+
+            <div id="a"></div>
+
+        </div>
+
+        <div id="div_rev"></div>
+        <div id="takes"></div>
+        <div id="ast"></div>
+
+    </div>
+</body>
+
+</html>
