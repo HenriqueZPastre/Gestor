@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Expenses</title>
+    <script src="javascript.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="calc();viwer_list();">
+    <div id="geral">
+        <div id="valor_bruto_div">
+            <div id="receita_bruta_div">
+
+                <p class="text_div_bruto">Receita:</p>
+                
+                <p class="val_div_bruto" id="val_receita">1300</p>
+
+            </div>
+            <div id="despesa_bruta_div">
+
+                <p class="text_div_bruto">Despesas:</p>
+               
+                <p class="val_div_bruto" id="val_despesa">2000</p>
+
+            </div>
+            <div id="metas_bruta_div">
+
+                <p class="text_div_bruto">Metas:</p>
+            
+                <p class="val_div_bruto" id="val_meta">1300</p>
+            </div>
+        </div>
+        <div id="form_div">
+            <form id="form_one">
+                <label class="lab"> Descrição:</label>
+                <input type="text" id="descricao_input">
+                <br>
+                <label class="lab"> Valor:</label>
+                <input type="number" id="valor_input">
+                <br>
+                <label class="lab" id="data_form">Data:</label>
+                <input type="date" id="date_input">
+                <br>
+                <label class="lab"> Categoria : </label>
+                <hr>
+                <div id="radio_div">
+                <input class="check_form" type="radio" id="receita_radio" name="type" value="Receita">
+                <label for="Receita">Receita</label>
+                <hr>
+                <input class="check_form" type="radio" id="despesa_radio" name="type" value="Despesa">
+                <label  for="Despesa">Despesa</label>
+                <hr>
+                <input class="check_form" type="radio" id="meta_radio" name="type" value="Metas">
+                <label   for="Metas">Metas</label>
+                <hr>
+                </div>
+
+            </form>
+            <button onclick="push()" id="btn">Enviar</button>
+            <!--<button onclick="viwer_list()">Take</button>
+            <button onclick="calc()">calc</button>-->
+
+        </div>
+
+        <div id="valor_liquido_div">
+            <div id="receita_liquido_div">
+                <p class="text_div_bruto">Receita Atual</p>
+                <p class="val_div_bruto" id="receita_liq_div">1300</p>
+            </div>
+        </div>
+        <hr>
+        <div id="tabela_div"></div>
+
+    </div>
+</body>
+
+</html>

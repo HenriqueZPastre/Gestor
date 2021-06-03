@@ -1,0 +1,120 @@
+#geral{
+    width: 100%;
+    height: 100%;
+}
+
+hr {
+    opacity: 0%;
+}
+
+#valor_bruto_div {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+    
+    border-radius: 5%;
+    margin-top: 0.5%;
+
+}
+
+#receita_bruta_div {
+    margin-left: 30%;
+    width: 30%;
+    
+    border-radius: 5%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.text_div_bruto{
+    text-align: left;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.val_div_bruto{
+    text-align: right;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#despesa_bruta_div {
+    margin-left: 30%;
+    width: 30%;
+    
+    border-radius: 5%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#metas_bruta_div {
+    margin-left: 30%;
+    width: 30%;
+    
+    border-radius: 5%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#form_div {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+
+    border-radius: 10%;
+    
+}
+
+.lab {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-align: left;
+    width: 20%;
+    display: inline-block;
+    margin-left: 20%;
+}
+
+#btn{
+ margin-right: 45%;
+  margin-left: 45%;
+}
+
+#radio_div{
+    margin-top: -9.9%;
+    margin-left: 38%;
+}
+
+#valor_liquido_div {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+    text-align: center;
+    
+    border-radius: 5%;
+
+}
+
+#receita_liquido_div{
+    
+    margin-top: 20%;
+    margin-bottom: 25%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#tabela_div {
+    padding-left: 32%;
+    padding-right: 40%;
+}
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 2px solid ;
+    text-align: left;
+    padding: 10px;
+    max-width: 100px;
+    min-width: 100px;
+    word-break: break-all;
+}
