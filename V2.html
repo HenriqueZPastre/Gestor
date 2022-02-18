@@ -182,7 +182,13 @@
                 <button class="btn btn-outline-dark me-5 dropdown-toggle" data-bs-toggle="dropdown"
                     aria-expanded="false">Menu</button>
                 <ul class="dropdown-menu">
-                    <a href="">teste</a>
+                    <a class="dropdown-item" href="">Receitas</a>
+                    <hr class="dropdown-divider">
+                    <a class="dropdown-item" href="">Despesas</a>
+                    <hr class="dropdown-divider">
+                    <a class="dropdown-item" href="">Metas</a>
+                    <hr class="dropdown-divider">
+                    <a class="dropdown-item" href="">Financeiros</a>
                 </ul>
             </div>
             <button class="btn btn-outline-primary rounded-circle ms-5" data-bs-toggle="modal"
@@ -267,7 +273,6 @@
                         Efetivo: true,
                         Data_efetivo: "2022-01-02"
                     },
-
                 ],
 
                 infos_home: [
@@ -319,12 +324,8 @@
                         Efetivo: true,
                         Data_efetivo: "2022-01-02"
                     },
-
                 ],
-
                 teste: "https://github.com/twbs.png",
-
-
             }
         },
 
@@ -344,8 +345,6 @@
 
             },
 
-
-
             add_entry() {
 
                 this.infos.push({
@@ -359,12 +358,9 @@
                     Image: this.categoria_image.ing,
                     Efetivo: this.novo_input.check,
                     Data_efetivo: this.novo_input.efetivo,
-
-                }
-                );
+                });
 
                 if (this.infos_home.length >= 4) {
-                    console.log("teste1")
                     this.infos_home.shift()
                     this.infos_home.push({
                         Descricao: this.novo_input.desc,
@@ -377,9 +373,7 @@
                         Image: this.categoria_image.ing,
                         Efetivo: this.novo_input.check,
                         Data_efetivo: this.novo_input.efetivo,
-
-                    }
-                    );
+                    });
                 } else {
                     this.infos_home.push({
                         Descricao: this.novo_input.desc,
@@ -392,22 +386,10 @@
                         Image: this.categoria_image.ing,
                         Efetivo: this.novo_input.check,
                         Data_efetivo: this.novo_input.efetivo,
-
-                    }
-                    );
-
-                    console.log("teste")
-
+                    });
                 }
-
-
-
-
             },
-
-
         }
-
 
     }).mount('#app')
 
