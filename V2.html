@@ -64,14 +64,14 @@
 
         <div class="container text-center">
             <hr>
-            <span># # # # # # # # # # # #  </span>
+            <span># # # # # # # # # # # # </span>
             <hr>
         </div>
 
         <div class="container">
-          
+
             <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-start mt-2 border rounded"
-                v-for="list in infos">
+                v-for="list in infos_home">
                 <img v-bind:src="list.Image" alt="twbs" width="16" height="16"
                     class="rounded-circle flex-shrink-0 mt-3">
                 <div class="ms-3 me-auto ">
@@ -267,8 +267,61 @@
                         Efetivo: true,
                         Data_efetivo: "2022-01-02"
                     },
-                    
+
                 ],
+
+                infos_home: [
+                    {
+                        Descricao: "this.novo_input.desc",
+                        Nome: "Salário",
+                        Valor: "1300,00",
+                        Data: "2021-11-11",
+                        Operacao: "+",
+                        Sub_Categoria: "Work",
+                        Categoria: "Salário",
+                        Image: "https://image.flaticon.com/icons/png/512/32/32563.png",
+                        Efetivo: true,
+                        Data_efetivo: "2022-01-02"
+                    },
+                    {
+                        Descricao: "this.novo_input.desc",
+                        Nome: "Salário",
+                        Valor: "1300,00",
+                        Data: "2021-11-11",
+                        Operacao: "+",
+                        Sub_Categoria: "Work",
+                        Categoria: "Salário",
+                        Image: "https://image.flaticon.com/icons/png/512/32/32563.png",
+                        Efetivo: true,
+                        Data_efetivo: "2022-01-02"
+                    },
+                    {
+                        Descricao: "this.novo_input.desc",
+                        Nome: "Salário",
+                        Valor: "1300,00",
+                        Data: "2021-11-11",
+                        Operacao: "+",
+                        Sub_Categoria: "Work",
+                        Categoria: "Salário",
+                        Image: "https://image.flaticon.com/icons/png/512/32/32563.png",
+                        Efetivo: true,
+                        Data_efetivo: "2022-01-02"
+                    },
+                    {
+                        Descricao: "this.novo_input.desc",
+                        Nome: "Salário",
+                        Valor: "1300,00",
+                        Data: "2021-11-11",
+                        Operacao: "+",
+                        Sub_Categoria: "Work",
+                        Categoria: "Salário",
+                        Image: "https://image.flaticon.com/icons/png/512/32/32563.png",
+                        Efetivo: true,
+                        Data_efetivo: "2022-01-02"
+                    },
+
+                ],
+
                 teste: "https://github.com/twbs.png",
 
 
@@ -308,7 +361,47 @@
                     Data_efetivo: this.novo_input.efetivo,
 
                 }
-                )
+                );
+
+                if (this.infos_home.length >= 4) {
+                    console.log("teste1")
+                    this.infos_home.shift()
+                    this.infos_home.push({
+                        Descricao: this.novo_input.desc,
+                        Nome: this.novo_input.nome,
+                        Valor: this.novo_input.valor,
+                        Data: this.novo_input.data,
+                        Operacao: this.novo_input.operacao,
+                        Sub_Categoria: this.novo_input.sub_categorias,
+                        Categoria: this.novo_input.categorias,
+                        Image: this.categoria_image.ing,
+                        Efetivo: this.novo_input.check,
+                        Data_efetivo: this.novo_input.efetivo,
+
+                    }
+                    );
+                } else {
+                    this.infos_home.push({
+                        Descricao: this.novo_input.desc,
+                        Nome: this.novo_input.nome,
+                        Valor: this.novo_input.valor,
+                        Data: this.novo_input.data,
+                        Operacao: this.novo_input.operacao,
+                        Sub_Categoria: this.novo_input.sub_categorias,
+                        Categoria: this.novo_input.categorias,
+                        Image: this.categoria_image.ing,
+                        Efetivo: this.novo_input.check,
+                        Data_efetivo: this.novo_input.efetivo,
+
+                    }
+                    );
+
+                    console.log("teste")
+
+                }
+
+
+
 
             },
 
